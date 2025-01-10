@@ -1,7 +1,11 @@
 package br.com.gean.navigation.screens
+
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -9,7 +13,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+
+
 
 @Composable
 fun LoginScreen(modifier: Modifier = Modifier) {
@@ -19,7 +26,7 @@ fun LoginScreen(modifier: Modifier = Modifier) {
             .background(Color(0xFF9E3ADB))
     ) {
         Column {
-            Column {
+            Column(modifier = Modifier.padding(vertical = 16.dp, horizontal = 32.dp)) {
                 Text(
                     text = "Login Screen",
                     fontSize = 48.sp,
@@ -27,6 +34,18 @@ fun LoginScreen(modifier: Modifier = Modifier) {
                     color = Color.Magenta,
                 )
                 Text(text = "Login Screen")
+            }
+            Column(
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                OutlinedTextField(
+                    value = "",
+                    onValueChange = {},
+                    label = {
+                        Text(text = "Email")
+                    },
+                    modifier = Modifier.fillMaxWidth()
+                )
             }
         }
     }
