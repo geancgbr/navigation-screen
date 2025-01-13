@@ -22,18 +22,21 @@ import androidx.compose.ui.unit.sp
 fun LoginScreen(modifier: Modifier = Modifier) {
     Surface(
         modifier = Modifier
-            .fillMaxSize()
-            .background(Color(0xFF9E3ADB))
+            .fillMaxSize(),
+            color = Color(0xFFAE6DE6)
     ) {
         Column {
             Column(modifier = Modifier.padding(vertical = 16.dp, horizontal = 32.dp)) {
                 Text(
-                    text = "Login Screen",
+                    text = "Login",
                     fontSize = 48.sp,
                     fontWeight = FontWeight.Bold,
-                    color = Color.Magenta,
+                    color = Color.White
                 )
-                Text(text = "Login Screen")
+                Text(text = "Efetue sua autenticação",
+                    color = Color.White
+                )
+
             }
             Column(
                 modifier = Modifier.fillMaxWidth()
